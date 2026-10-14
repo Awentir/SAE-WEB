@@ -13,10 +13,10 @@
         <nav class="nav-bar">
             <img src="logo" class="nav-bar__logo">
             <ul class="nav-bar__pages">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Boutique</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./boutique.html">Boutique</a></li>
+                <li><a href="./evenement.html">Événements</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
             <ul class="nav-bar__panier-compte">
                 <li><button class="nav-bar__button" type="button"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Mon Panier</a></button></li>
@@ -25,82 +25,272 @@
         </nav>
     </header>
     <main>
-    <section class="new-book">
-        <p class="over-title">TOUT JUSTE ARRIVÉS</p>
-        <h2>Les nouveautés à ne pas manquer</h2>
-        <p class="under-title">La rentrée littéraire et quelques futures favoris, récemment déballées par notre équipe</p>
-        <button class="goto" type="button"">Toutes les nouveautés</button>
-        <div class="book-list">
-            <ul>
-                <li class="book">
-                    <div class="cover1">
-                        <p>ROMAN</p>
-                        <h5>La nuit des lucioles</h5>
-                        <p>Clara Brunet</p>
-                    </div>
-                </li>
-                <li class="book">
-                    <div class="cover2">
-                        <p>JEUNESSE</p>
-                        <h5>Cartographie des jours</h5>
-                        <p>Maël Dorsay</p>
-                    </div>
-                </li>
-                <li class="book">
-                    <div class="cover3">
-                        <p>ESSAI</p>
-                        <h5>Habiter le vivant</h5>
-                        <p>Nora Benalli</p>
-                    </div>
-                </li>
-                <li class="book">
-                    <div class="cover4">
-                        <p>ROMAN</p>
-                        <h5>Le bleu entre nous</h5>
-                        <p>Inès Mori</p>
-                    </div>
-                </li>
-                <li class="book">
-                    <div class="cover5">
-                        <p>POÉSIE</p>
-                        <h5>Petites métérologies</h5>
-                        <p>Émile Sorel</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <hr>
-    <section class="Accueil__events">
-        <p class="over-title">A L'AGENDA</p>
-        <h2>La librairie est aussi un lieu de rencontres</h2>
-        <p class="under-title">Auteurs, ateliers, clubs de lecture : venez faire vivre les histoires avec nous</p>
-        <button class="goto" type="button"">Tout les événements</button>
-        <div class="Accueil__events__right">
-            <ul>
-                <li>
-                    <div class="Accueil__events__event">
-                        <div class="Accueil__events__event__date">
-                            <h6>08</h6>
-                            <p>OCT</p>
+        <section class="hero">
+            <div class="hero__gauche">
+                <h1 class="hero__gauche__titre">Des découvertes,<span> des histoires à partager</span></h1>
+                <h3 class="hero__gauche__sous-titre">
+                    Romans, essais, littérature jeunesse. Des livres choisis avec soin par nos libraires,
+                    à découvrir en ligne ou rue Chaudrier.
+                </h3>
+                <ul class="hero__gauche__buttons">
+                    <li><button class="hero__gauche__button--nouveaute" type="button"><a href="#">Découvrir la boutique</a></button></li>
+                    <li><button class="hero__gauche__button--maps" type="button"><a href="#">Venir à la librairie</a></button></li>
+                </ul>
+                <ul class="hero__gauche__infos">
+                    </li>
+                        <p>8000+</p>
+                        <p>livres en stock</p>
+                    </li>
+                    <li>
+                        <p>4,7/5</p>
+                        <p>par 328 lecteur</p>
+                    </li>
+                    <li>
+                        <p>Depuis 2008</p>
+                        <p>indépendante</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__droite">
+                <p class="hero__droite__location"><i class="fa-solid fa-location-dot"></i> 2 rue Chaudrier - 17000 La Rochelle</p>
+                <div>
+                    <p class="hero__droite__nomSite">Booked</p>
+                    <p class="hero__droite__description">Une librairie à votre écoute au plus proche de vous</p>
+                </div>
+            </div>
+        </section>
+        <section class="Accueil__new-book">
+            <p class="over-title">TOUT JUSTE ARRIVÉS</p>
+            <h2>Les nouveautés à ne pas manquer</h2>
+            <p class="under-title">La rentrée littéraire et quelques futures favoris, récemment déballées par notre équipe</p>
+            <button class="goto" type="button"">Toutes les nouveautés</button>
+            <div class="book-list">
+                <ul>
+                    <li class="book">
+                        <div class="cover1">
+                            <p>ROMAN</p>
+                            <h5>La nuit des lucioles</h5>
+                            <p>Clara Brunet</p>
                         </div>
-                        <div class="Accueil__events__event__text">
-                            <p>RENCONTRE</p>
-                            <h6>Rencontre avec Alice Zeniter</h6>
-                            <p>19h00-1h30</p>
+                    </li>
+                    <li class="book">
+                        <div class="cover2">
+                            <p>JEUNESSE</p>
+                            <h5>Cartographie des jours</h5>
+                            <p>Maël Dorsay</p>
                         </div>
-                        <!-- Faire les deux autres -->
-                    </div>
-                </li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+                    </li>
+                    <li class="book">
+                        <div class="cover3">
+                            <p>ESSAI</p>
+                            <h5>Habiter le vivant</h5>
+                            <p>Nora Benalli</p>
+                        </div>
+                    </li>
+                    <li class="book">
+                        <div class="cover4">
+                            <p>ROMAN</p>
+                            <h5>Le bleu entre nous</h5>
+                            <p>Inès Mori</p>
+                        </div>
+                    </li>
+                    <li class="book">
+                        <div class="cover5">
+                            <p>POÉSIE</p>
+                            <h5>Petites métérologies</h5>
+                            <p>Émile Sorel</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <section class="Accueil__events">
+            <p class="over-title">A L'AGENDA</p>
+            <h2>La librairie est aussi un lieu de rencontres</h2>
+            <p class="under-title">Auteurs, ateliers, clubs de lecture : venez faire vivre les histoires avec nous</p>
+            <button class="goto" type="button"">Tout les événements</button>
+            <div class="Accueil__events__right">
+                <ul>
+                    <li>
+                        <div class="Accueil__events__event">
+                            <div class="Accueil__events__event__date">
+                                <h6>08</h6>
+                                <p>OCT</p>
+                            </div>
+                            <div class="Accueil__events__event__text">
+                                <p>RENCONTRE</p>
+                                <h6>Rencontre avec Alice Zeniter</h6>
+                                <p>19h00-1h30</p>
+                                <p>Libre accès</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Accueil__events__event">
+                            <div class="Accueil__events__event__date">
+                                <h6>15</h6>
+                                <p>OCT</p>
+                            </div>
+                            <div class="Accueil__events__event__text">
+                                <p>CLUB BOOKED</p>
+                                <h6>Club de lecture - nos vis minuscules</h6>
+                                <p>18h30</p>
+                                <p>Gratuit</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Accueil__events__event">
+                            <div class="Accueil__events__event__date">
+                                <h6>22</h6>
+                                <p>OCT</p>
+                            </div>
+                            <div class="Accueil__events__event__text">
+                                <p>JEUNESSE</p>
+                                <h6>Atelier illustration pour les 7-10 ans</h6>
+                                <p>15h00</p>
+                                <p>Sur inscription</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-    </section>
+        </section>
+        <hr>
+        <section class="Accueil__team">
+            <p class="over-title">Une équipe en or</p>
+            <h2>Notre Équipe</h2>
+            <p class="under-title">Découvrer notre équipe de passionné toujours a votre écoute</p>
+            <button class="goto" type="button"">Nous contacter</button>
+            <div class="Accueil__team__members">
+                <ul>
+                    <li>
+                        <div class="Accueil__team__member">
+                            <img src="./images/Equipe/Aaron.jpg">
+                            <div class="Accueil__team__member__text">
+                                <h6>Aaron</h6>
+                                <p>Jeunesse & illustration</p>
+                                <p>
+                                    Un libraire passioné qui sera vous conseiller dans de nombreux
+                                    domain, specialiste de la littérature jeunesse.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Accueil__team__member">
+                            <img src="./images/Equipe/Thomas.jpg">
+                            <div class="Accueil__team__member__text">
+                                <h6>Thomas</h6>
+                                <p>Essais & sciences humaines</p>
+                                <p>
+                                    Intelligent sans être intimidant : un regard neuf sur nos rues et
+                                    notre manière d'y vivre ensemble
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><div class="Accueil__team__member">
+                            <img src="./images/Equipe/Jeanne.jpg">
+                            <div class="Accueil__team__member__text">
+                                <h6>Jeanne</h6>
+                                <p>Romans & poésie</p>
+                                <p>
+                                    S'ouvrir à la litterature c'est comme se jeter dans
+                                    l'immensité de la mer avec les poissons
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="Accueil__reviews">
+            <p>VOS MOTS DOUX</p>
+            <h2>Le quartier parle de nous</h2>
+            <div class="Accueil__reviews__boards">
+                <ul>
+                    <li>
+                        <div class="Accueil__reviews__review">
+                            <p class="review-note">*****</p>
+                            <p class="review-text">
+                            Je viens pour un titre, je repars toujours avec une surprise 
+                            et une recommandation parfaite
+                            </p>
+                            <div class="Accueil__reviews__review_account">
+                                <img src="#" alt="profil_picture">
+                                <p class="account-name">Sarah M.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Accueil__reviews__review">
+                            <p class="review-note">****</p>
+                            <p class="review-text">
+                            Le retrait est super simple, mais je reste quand même vingt minutes
+                            à discuter avec l'équipe
+                            </p>
+                            <div class="Accueil__reviews__review_account">
+                                <img src="#" alt="profil_picture">
+                                <p class="account-name">Timéo R.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Accueil__reviews__review">
+                            <p class="review-note">*****</p>
+                            <p class="review-text">
+                            Le rayon jeunesse est une merveille. Mes enfants demandent maintenant
+                            à revenir
+                            </p>
+                            <div class="Accueil__reviews__review_account">
+                                <img src="#" alt="profil_picture">
+                                <p class="account-name">Élodie C.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
     </main>
     <footer>
-
+        <section class="footer__text">
+            <img src="#" alt="logo">
+            <p class="booked-description"> 
+                Une librairie indépendante, 
+                joyeuse et curieuse, au coeur de la ville depuis 2008
+            </p>
+            <p>2 arbre du pendu 17000 La Rochelle</p>
+            <p>Lun-Sam 10h-19h Dim 11h-18h</p>
+        </section>
+        <section class="footer__explorer">
+            <p>EXPLORER</p>
+            <ul>
+                <li><a href="#">Tous les livres</a></li>
+                <li><a href="#">Nouveutés</a></li>
+                <li><a href="#">Meilleures ventes</a></li>
+                <li><a href="#">Coups de coeur</a></li>
+            </ul>
+        </section>
+        <section class="footer__booked">
+            <p>BOOKED</p>
+            <ul>
+                <li><a href="#">Événements</a></li>
+                <li><a href="#">Notre équipe</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </section>
+        <section class="footer__booked">
+            <p>BESOIN D'AIDE</p>
+            <ul>
+                <li><a href="#">Mes commandes</a></li>
+                <li><a href="#">Retours</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </section>
     </footer>
 </body>
 </html>
