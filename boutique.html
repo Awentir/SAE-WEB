@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Boutique | Booked</title>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
-            <img src="logo" class="nav-bar__logo">
+            <div class="nav-bar__brand">
+                <img src="logo" class="nav-bar__logo">
+                <span class="nav-bar__nom">Booked</span>
+            </div>
             <ul class="nav-bar__pages">
                 <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./boutique.html">Boutique</a></li>
-                <li><a href="./evenements.html">Événements</a></li>
+                <li><a href="./evenement.html">Événements</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
             <ul class="nav-bar__panier-compte">
@@ -22,31 +25,31 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="hero">
             <div class="hero__gauche">
                 <p class="hero__gauche__accroche">Des livre séléctionné avec amour</p>
                 <h1 class="hero__gauche__titre">Bienvenue sur la<span>boutique de la librairie</span></h1>
-                <h3 class="hero__gauche__sous-titre">Romans, essais, littérature jeunesse, BD & Mangas, art & culture et de la poésie pour rassasier votre curiosité</h3>
+                <h3 class="hero__gauche__sous-titre">Romans, essais, littérature jeunesse, BD &amp; Mangas, art &amp; culture et de la poésie pour rassasier votre curiosité</h3>
                 <ul class="hero__gauche__buttons">
                     <li><button class="hero__gauche__button--nouveaute" type="button"><a href="#">Découvrir</a></button></li>
                     <li><button class="hero__gauche__button--maps" type="button"><a href="#">Venir à la librairie</a></button></li>
                 </ul>
                 <ul class="hero__gauche__infos">
-                    </li>
-                        <p>8000+</p>
-                        <p>livres en stock</p>
+                    <li>
+                        <span>8000+</span>
+                        <small>livres en stock</small>
                     </li>
                     <li>
-                        <p>4,7/5</p>
-                        <p>par 328 lecteur</p>
+                        <span>4,7/5</span>
+                        <small>par 328 lecteur</small>
                     </li>
                     <li>
-                        <p>Depuis 2008</p>
-                        <p>indépendante</p>
+                        <span>Depuis 2008</span>
+                        <small>indépendante</small>
                     </li>
                 </ul>
-
             </div>
             <div class="hero__droite">
                 <p class="hero__droite__location"><i class="fa-solid fa-location-dot"></i> 2 rue Chaudrier - 17000 La Rochelle</p>
@@ -55,8 +58,195 @@
                     <p class="hero__droite__description">Une boutique au plus proche de chez vous, même que vous viviez loin</p>
                 </div>
             </div>
+        </section>
 
+        <section class="explorer">
+            <p class="explorer__accroche">Explorer</p>
+            <h2 class="explorer__titre">Une envie particulière ?</h2>
+            <form class="explorer__recherche" action="./boutique.html" method="get" role="search">
+                <label class="explorer__recherche__label" for="recherche-livre">Commencez vos recherches</label>
+                <input class="explorer__recherche__champ" id="recherche-livre" name="recherche" type="search" placeholder="Commencez vos recherches">
+                <button class="explorer__recherche__button" type="submit"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            </form>
+            <ul class="explorer__categories">
+                <li><a class="explorer__categorie explorer__categorie--romans">
+                    <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+                    <span>Romans</span>
+                    <small>3 200 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--essais">
+                    <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                    <span>Essais</span>
+                    <small>1 860 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--jeunesse">
+                    <i class="fa-solid fa-child-reaching" aria-hidden="true"></i>
+                    <span>Jeunesse</span>
+                    <small>2 410 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--bd">
+                    <i class="fa-regular fa-image" aria-hidden="true"></i>
+                    <span>BD & Manga</span>
+                    <small>1 780 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--culture">
+                    <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                    <span>Arts & Culture</span>
+                    <small>880 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--poesie">
+                    <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                    <span>Poésie</span>
+                    <small>580 titres</small>
+                </a></li>
+                <li><a class="explorer__categorie explorer__categorie--nouveautes">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>Nouveautés</span>
+                    <small>74 titres</small>
+                </a></li>
+            </ul>
+        </section>
+
+        <section class="collection" id="livres">
+            <p class="collection__accroche">Découvrez notre collection</p>
+            <h2 class="collection__titre">Tous les livres</h2>
+            <p class="collection__description">Une nouvelle envie de lecture ? Trouvez ici votre prochain coup de cœur.</p>
+            <ul class="collection__livres">
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/La nuit des lucioles.jpg" alt="Couverture de La nuit des lucioles">
+                    <p class="collection__livre__categorie">Roman</p>
+                    <span class="collection__livre__badge">Nouveau</span>
+                    <h3 class="collection__livre__titre">La nuit des lucioles</h3>
+                    <p class="collection__livre__auteur">Clara Brunet</p>
+                    <p class="collection__livre__prix">21,90 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Cartographie des jours.jpg" alt="Couverture de Cartographie des jours">
+                    <p class="collection__livre__categorie">Jeunesse</p>
+                    <span class="collection__livre__badge">Coup de cœur</span>
+                    <h3 class="collection__livre__titre">Cartographie des jours</h3>
+                    <p class="collection__livre__auteur">Maël Dorsay</p>
+                    <p class="collection__livre__prix">19,50 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Le bleu entre nous.jpg" alt="Couverture de Le bleu entre nous">
+                    <p class="collection__livre__categorie">Roman</p>
+                    <span class="collection__livre__badge">Exclusivité</span>
+                    <h3 class="collection__livre__titre">Le bleu entre nous</h3>
+                    <p class="collection__livre__auteur">Inès Mori</p>
+                    <p class="collection__livre__prix">18,90 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Petite meterologie.jpg" alt="Couverture de Petites météorologies">
+                    <p class="collection__livre__categorie">Poésie</p>
+                    <h3 class="collection__livre__titre">Petites météorologies</h3>
+                    <p class="collection__livre__auteur">Émile Sorel</p>
+                    <p class="collection__livre__prix">16,00 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/La nuit des lucioles.jpg" alt="Couverture de La nuit des lucioles">
+                    <p class="collection__livre__categorie">Roman</p>
+                    <span class="collection__livre__badge">Nouveau</span>
+                    <h3 class="collection__livre__titre">La nuit des lucioles</h3>
+                    <p class="collection__livre__auteur">Clara Brunet</p>
+                    <p class="collection__livre__prix">21,90 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Cartographie des jours.jpg" alt="Couverture de Cartographie des jours">
+                    <p class="collection__livre__categorie">Jeunesse</p>
+                    <span class="collection__livre__badge">Coup de cœur</span>
+                    <h3 class="collection__livre__titre">Cartographie des jours</h3>
+                    <p class="collection__livre__auteur">Maël Dorsay</p>
+                    <p class="collection__livre__prix">19,50 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Le bleu entre nous.jpg" alt="Couverture de Le bleu entre nous">
+                    <p class="collection__livre__categorie">Roman</p>
+                    <span class="collection__livre__badge">Exclusivité</span>
+                    <h3 class="collection__livre__titre">Le bleu entre nous</h3>
+                    <p class="collection__livre__auteur">Inès Mori</p>
+                    <p class="collection__livre__prix">18,90 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+                <li class="collection__livre">
+                    <img class="collection__livre__couverture" src="./Images/Livres/Petite meterologie.jpg" alt="Couverture de Petites météorologies">
+                    <p class="collection__livre__categorie">Poésie</p>
+                    <h3 class="collection__livre__titre">Petites météorologies</h3>
+                    <p class="collection__livre__auteur">Émile Sorel</p>
+                    <p class="collection__livre__prix">16,00 €</p>
+                    <button class="collection__livre__ajouter" type="button"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                </li>
+            </ul>
+            <a class="collection__voir-plus" href="#livres">Voir plus <i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+        </section>
+
+        <section class="retrait">
+            <div class="retrait__presentation">
+                <p class="retrait__delai"><i class="fa-regular fa-clock" aria-hidden="true"></i> Prêt en 2 heures</p>
+                <h2 class="retrait__titre">Réservez ici. Retirez gratuitement chez nous.</h2>
+                <p class="retrait__description">Le plaisir de commander facilement, le sourire de votre libraire en plus.</p>
+            </div>
+            <ol class="retrait__etapes">
+                <li class="retrait__etape">
+                    <span class="retrait__etape__numero">01</span>
+                    <h3>Commandez en ligne</h3>
+                    <p>Vos livres favoris en deux minutes.</p>
+                </li>
+                <li class="retrait__etape">
+                    <span class="retrait__etape__numero">02</span>
+                    <h3>On vous écrit</h3>
+                    <p>Dès que votre sac est prêt au comptoir.</p>
+                </li>
+                <li class="retrait__etape">
+                    <span class="retrait__etape__numero">03</span>
+                    <h3>Passez quand vous voulez</h3>
+                    <p>Sous 48 h, sans frais ni tracas.</p>
+                </li>
+            </ol>
         </section>
     </main>
+
+    <footer>
+        <section class="footer__text">
+            <img src="#" alt="logo">
+            <p class="booked-description"> 
+                Une librairie indépendante, 
+                joyeuse et curieuse, au coeur de la ville depuis 2008
+            </p>
+            <p>2 rue Chaudrier 17000 La Rochelle</p>
+            <p>Lun-Sam 10h-19h Dim 11h-18h</p>
+        </section>
+        <section class="footer__explorer">
+            <p>EXPLORER</p>
+            <ul>
+                <li><a href="#">Tous les livres</a></li>
+                <li><a href="#">Nouveutés</a></li>
+                <li><a href="#">Meilleures ventes</a></li>
+                <li><a href="#">Coups de coeur</a></li>
+            </ul>
+        </section>
+        <section class="footer__booked">
+            <p>BOOKED</p>
+            <ul>
+                <li><a href="#">Événements</a></li>
+                <li><a href="#">Notre équipe</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </section>
+        <section class="footer__booked">
+            <p>BESOIN D'AIDE</p>
+            <ul>
+                <li><a href="#">Mes commandes</a></li>
+                <li><a href="#">Retours</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
