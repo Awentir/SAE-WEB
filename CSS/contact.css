@@ -1,17 +1,18 @@
 /* ==========================================================================
-   Page contact
+   Page contact (Mobile First)
    ========================================================================== */
 main {
     background: var(--color-creme);
 }
 
+/* --- Base : Mobile (< 768px) -------------------------------------------- */
 .contact {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-page);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     width: min(100%, 1440px);
     margin: 0 auto;
-    padding: 32px var(--space-page);
+    padding: 28px 16px;
     font-family: var(--font-serif);
 }
 
@@ -22,23 +23,26 @@ main {
 
 .contact h1, .contact__demande h2 {
     margin-bottom: 12px;
-    font-size: 2.65rem;
+    font-size: 2rem; 
     line-height: 1.12;
 }
 
 .contact h2, .contact__intro {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     line-height: 1.25;
 }
 
-/* --- Colonne gauche ------------------------------------------------------ */
+/* --- Colonne gauche --- */
 .contact__infos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 38px;
-    padding: 8px 56px 8px 0;
-    border-right: 1px solid var(--color-border);
+    padding: 0 0 30px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.contact__reseaux {
+    padding-bottom: 34px;
 }
 
 .contact__reseaux h2 {
@@ -50,7 +54,8 @@ main {
     flex-direction: column;
     gap: 10px;
     width: min(100%, 360px);
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .reseau {
@@ -61,6 +66,8 @@ main {
     padding: 0 14px;
     border-radius: 999px;
     font: 600 0.8rem var(--font-sans);
+    text-decoration: none;
+    color: inherit;
 }
 
 .reseau:hover {
@@ -70,6 +77,7 @@ main {
 
 .reseau span {
     flex: 1;
+    text-align: left;
 }
 
 .reseau i:last-child {
@@ -80,28 +88,35 @@ main {
 .reseau--facebook { background: var(--color-bleu); }
 .reseau--tiktok { background: var(--color-jaune); }
 
+.contact__boutique {
+    padding-top: 34px;
+    border-top: 1px solid var(--color-border);
+}
+
 .contact__boutique h2 {
     margin-bottom: 24px;
 }
 
 .contact__coordonnees {
-    display: grid;
-    grid-template-columns: minmax(150px, 1.15fr) minmax(110px, 0.85fr); 
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
 }
 
 .contact__carte {
-    width: 100%;
+    width: min(100%, 300px);
     aspect-ratio: 200 / 155;
     border: 0;
     border-radius: 18px;
 }
 
 .contact dl {
-    display: grid;
-    gap: 16px;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: min(100%, 300px);
+    margin: 0 auto;
     font-family: var(--font-sans);
 }
 
@@ -125,14 +140,16 @@ main {
 
 .contact dd a {
     font-weight: 700;
+    text-decoration: none;
+    color: inherit;
 }
 
-/* --- Colonne droite : formulaire ---------------------------------------- */
+/* --- Colonne droite : formulaire --- */
 .contact__demande {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -146,7 +163,7 @@ main {
 
 form {
     width: min(100%, 560px);
-    padding: 28px;
+    padding: 22px;
     border: 1px solid var(--color-border);
     border-radius: 20px;
     background: var(--color-white);
@@ -154,9 +171,9 @@ form {
 }
 
 .form__identite {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .champ {
@@ -183,6 +200,7 @@ form {
     background: var(--color-white);
     color: inherit;
     font: 0.75rem var(--font-sans);
+    box-sizing: border-box;
 }
 
 .champ ::placeholder {
@@ -192,11 +210,12 @@ form {
 
 .champ textarea {
     min-height: 82px;
-    resize: none ;
+    resize: none;
 }
 
 .champ :focus {
     border-color: var(--color-orange);
+    outline: none;
 }
 
 .form__consentement {
@@ -219,6 +238,7 @@ form {
     display: block;
     text-decoration: underline;
     text-underline-offset: 2px;
+    color: inherit;
 }
 
 .form__envoyer {
@@ -251,67 +271,95 @@ form {
 }
 
 /* ==========================================================================
-   Media Queries Contact
+   Media Queries (Mobile First : min-width)
    ========================================================================== */
-@media (max-width: 1100px) {
-    .contact h1, .contact__demande h2 { font-size: 2.2rem; }
-    .contact h2, .contact__intro { font-size: 1.4rem; }
-    .contact__infos { padding-right: 28px; }
-    .contact__coordonnees { gap: 20px; }
-    form { padding: 22px; }
-}
 
-@media (max-width: 760px) {
+/* --- Tablette & Petit Desktop (>= 768px) --- */
+@media (min-width: 768px) {
     .contact {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 28px 22px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 32px 22px;
     }
+
     .contact__infos {
+        justify-content: space-between;
+        padding: 8px 28px 8px 0;
+        border-bottom: 0;
+        border-right: 1px solid var(--color-border);
+        text-align: left;
         gap: 34px;
-        padding: 0 0 30px;
-        border-right: 0;
-        border-bottom: 1px solid var(--color-border);
-        text-align: center;
+    }
+
+    .contact__reseaux {
+        padding-bottom: 0;
+    }
+
+    .contact__reseaux ul {
+        margin: 0;
+    }
+
+    .contact__boutique {
+        padding-top: 0;
+        border-top: none;
+        text-align: left;
+    }
+
+    .contact__coordonnees {
+        display: grid;
+        grid-template-columns: minmax(150px, 1.15fr) minmax(110px, 0.85fr);
+        align-items: center;
+        gap: 20px;
     }
 
     .contact__carte {
-        max-width: 100%;
-        width: min(100%, 560px); 
-    }
-    
-    .contact__reseaux ul {
-        margin: 0 auto;
+        width: 100%;
     }
 
-    
-    .contact__coordonnees {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 24px;
+    .contact dl {
+        display: grid;
+        gap: 16px;
+        width: auto;
+        text-align: left;
     }
 
-    .contact h1, .contact__demande h2 { font-size: 2rem; }
-    .contact h2, .contact__intro { font-size: 1.25rem; }
-    .contact__demande { padding: 0; }
+    .contact__demande {
+        padding: 8px 0;
+    }
+
+    .form__identite {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
 }
 
-@media (max-width: 420px) {
-    .contact { padding-inline: 16px; }
-    .contact__boutique { text-align: center; }
+/* --- Grand Desktop (>= 1100px) --- */
+@media (min-width: 1100px) {
+    .contact {
+        gap: var(--space-page);
+        padding: 32px var(--space-page);
+    }
+
+    .contact h1, .contact__demande h2 {
+        font-size: 2.65rem;
+    }
+
+    .contact h2, .contact__intro {
+        font-size: 1.75rem;
+    }
+
+    .contact__infos {
+        gap: 38px;
+        padding-right: 56px;
+    }
+
     .contact__coordonnees {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        gap: 32px;
     }
-    .contact__carte { max-width: 300px; }
-    .contact dl {
-        width: min(100%, 300px);
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-    .form__identite {
-        grid-template-columns: 1fr;
-        gap: 0;
+
+    form {
+        padding: 28px;
     }
 }
