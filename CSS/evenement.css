@@ -1,0 +1,39 @@
+
+h1{
+    font-family: var(--font-serif);
+    font-size:175%;
+}
+
+span{
+    color:var(--color-orange)
+}
+
+.hero{
+    margin: 0.5rem; /* Marge extérieure */
+}
+
+.hero__gauche{
+    padding:1rem; /* Marge intérieure */
+    background-color: var(--color-jaune);
+    border-radius: 10px; /* Applique un effet d'arrondit */
+}
+
+.hero__gauche__buttons{
+    display:flex;
+    gap:1em;    /* Ecart */
+    flex-direction: row; /* Blocs en ligne*/
+    flex-wrap: wrap; /* Retour à la ligne si plus de place */
+    justify-content: center; /* Garde les boutons au centre du bloc */
+}
+
+.hero__gauche__buttons li button{
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    flex-basis:75%; /*taille minimum*/
+    flex-grow:1;
+    background-color: var(--color-rose); /*Couleur du bouton*/
+    border-radius:30px;
+    border-color:var(--color-texte);
+}
