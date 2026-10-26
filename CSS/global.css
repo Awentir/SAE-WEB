@@ -8,9 +8,13 @@
     --color-border: #e9dfcf;
     --color-text-muted: #82776e;
     --color-rose: #f5c4d2;
-    --color-bleu: #b9e6d0;
+    --color-vert: #b9e6d0;
     --color-jaune: #ffda68;
     --color-orange: #ff5948;
+    --color-bleu: #4a90e2;
+    --color-lavande: #c8b6e2;
+    --color-violet: #9b59b6;
+
     --font-serif: Georgia, "Times New Roman", serif;
     --font-sans: Arial, sans-serif;
     --space-page: 40px; 
@@ -19,6 +23,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -250,7 +258,7 @@ footer :is(p, h2) {
 }
 
 /* ==========================================================================
-   Media Queries (Mobile First : min-width)
+   Media Queries
    ========================================================================== */
 
 /* --- Tablette (>= 768px) : Logo & Footer Desktop --- */

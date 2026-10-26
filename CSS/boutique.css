@@ -1,0 +1,588 @@
+/* ==========================================================================
+   Page Boutique (Mobile First)
+   ========================================================================== */
+main {
+    background: var(--color-creme);
+    font-family: var(--font-sans);
+}
+
+h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Section Hero --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.hero__gauche {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero__gauche__accroche {
+    color: var(--color-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero__gauche__titre {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.hero__gauche__titre span {
+    display: block;
+    color: var(--color-orange);
+}
+
+.hero__gauche__sous-titre {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+.hero__gauche__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.hero__gauche__buttons button {
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--color-texte);
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hero__gauche__buttons button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero__gauche__button--nouveaute {
+    background: var(--color-orange) !important;
+    border-color: var(--color-orange) !important;
+    color: var(--color-white);
+}
+
+.hero__gauche__buttons button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.hero__gauche__infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 16px;
+    list-style: none;
+}
+
+.hero__gauche__infos li {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__gauche__infos span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
+
+.hero__gauche__infos small {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.hero__droite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    background: url('/Images/Boutique/home-boutique.jpg') center/cover no-repeat;
+    background-color: var(--color-text-muted); 
+    color: var(--color-white);
+}
+
+.hero__droite__location {
+    align-self: flex-start;
+    background: var(--color-white);
+    color: var(--color-texte);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.hero__droite > div {
+    background: var(--color-white);
+    color: var(--color-texte);
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 250px;
+}
+
+.hero__droite__nomSite {
+    font-size: 0.75rem;
+    color: var(--color-orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.hero__droite__description {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+/* --- Section Explorer (Filtres & Recherche) --- */
+.explorer {
+    width: min(100%, 1440px);
+    margin: 40px auto;
+    padding: 0 16px;
+    background-color: var(--color-white);
+}
+
+.explorer__accroche {
+    color: var(--color-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.explorer__titre {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.explorer__recherche {
+    display: flex;
+    align-items: center;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 4px 16px;
+    max-width: 500px;
+    margin: 0 auto 32px;
+}
+
+.explorer__recherche__label {
+    display: none;
+}
+
+.explorer__recherche__champ {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.explorer__recherche__button {
+    background: transparent;
+    border: none;
+    color: var(--color-texte);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.explorer__categories {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    overflow-x: auto;
+    padding: 10px 0 20px;
+}
+
+.explorer__categorie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto; 
+    width: 140px;
+    height: 140px;
+    padding: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--color-texte);
+    scroll-snap-align: start; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.explorer__categorie:hover {
+    transform: translateY(-4px);
+}
+
+.explorer__categorie i {
+    font-size: 1.5rem;
+    margin-bottom: auto;
+    background: var(--color-white);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.explorer__categorie span {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.explorer__categorie small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Couleurs des cartes catégories */
+.explorer__categorie--romans { background: var(--color-rose); }
+.explorer__categorie--essais { background: var(--color-jaune); }
+.explorer__categorie--jeunesse { background: var(--color-vert); }
+.explorer__categorie--bd { background: var(--color-lavande); }
+.explorer__categorie--culture { background: var(--color-bleu); }
+.explorer__categorie--poesie { background: var(--color-rose); }
+.explorer__categorie--nouveautes { background: var(--color-violet); }
+.explorer__categorie--tous { background: var(--color-texte); color: var(--color-white); }
+.explorer__categorie--tous i { color: var(--color-texte); }
+
+/* --- Section Collection (Grille de livres) --- */
+.collection {
+    width: min(100%, 1440px);
+    margin: 60px auto;
+    padding: 0 16px;
+}
+
+.collection__accroche {
+    color: var(--color-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.collection__titre {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.collection__description {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+}
+
+.collection__livres {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px;
+    list-style: none;
+    margin-bottom: 40px;
+    
+}
+
+.collection__livre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 26px min-content min-content 1fr;
+    position: relative;
+    border-radius: 12px;
+}
+
+.collection__livre__couverture {
+    grid-row: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.collection__livre__categorie {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: transparent;
+    color: var(--color-white);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.collection__livre__badge {
+    grid-row: 2;
+    justify-self: start;
+    background: var(--color-jaune);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.collection__livre__titre {
+    grid-row: 3;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.collection__livre__auteur {
+    grid-row: 4;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.collection__livre__prix {
+    grid-row: 5;
+    align-self: end;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.collection__livre__ajouter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-orange);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.collection__livre__ajouter:hover {
+    transform: scale(1.1);
+}
+
+.collection__voir-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 12px 24px;
+    border: 1px solid var(--color-texte);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    background: var(--color-white);
+}
+
+.collection__voir-plus:hover {
+    background: var(--color-orange);
+    color: var(--color-white);
+}
+
+/* Classes JavaScript (Filtres) */
+.hidden {
+    display: none !important;
+}
+
+.collection__empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+    grid-column: 1 / -1;
+    padding: 20px 0;
+}
+
+/* --- Section Retrait --- */
+.retrait {
+    background: #0d5c75;
+    color: var(--color-white);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.retrait__presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.retrait__delai {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-jaune);
+    color: var(--color-texte);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: max-content;
+}
+
+.retrait__titre {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.retrait__description {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.retrait__etapes {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+}
+
+.retrait__etape {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.retrait__etape__numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-white);
+    color: #0d5c75;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.retrait__etape h3 {
+    font-size: 1.1rem;
+    font-family: var(--font-serif);
+}
+
+.retrait__etape p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* --- Tablette (>= 768px) --- */
+@media (min-width: 768px) {
+    .collection__livres {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .retrait {
+        padding: 60px 40px;
+    }
+
+    .retrait__etapes {
+        flex-direction: row;
+    }
+
+    .retrait__etape {
+        flex: 1;
+    }
+}
+
+/* --- Grand Desktop (>= 1100px) --- */
+@media (min-width: 1100px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+        padding: 40px 75px;
+    }
+
+    .hero__gauche__titre {
+        font-size: 3.5rem;
+    }
+
+    .hero__gauche__sous-titre {
+        font-size: 1.15rem;
+        max-width: 80%;
+    }
+
+    .hero__droite {
+        min-height: 500px;
+        padding: 40px;
+    }
+
+    .explorer {
+        padding: 0 75px;
+    }
+
+    .explorer__titre {
+        font-size: 2.5rem;
+    }
+
+    .explorer__categorie {
+        width: 180px;
+        height: 180px;
+    }
+
+    .collection {
+        padding: 0 75px;
+    }
+
+    .collection__livres {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .retrait {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+        padding: 80px 75px;
+    }
+}
