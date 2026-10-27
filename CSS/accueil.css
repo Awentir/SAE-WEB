@@ -145,7 +145,7 @@
     font-size: 1.1rem;
     line-height: 1.3;
 }
-
+/* Fin hero*/
 
 h1{
     font-family: var(--font-serif);
@@ -205,7 +205,6 @@ section{
 
 .book{
     border: 1px transparent black;
-    
 }
 
 .book .cover__book-type{
@@ -235,20 +234,17 @@ section{
 }
 
 #book1 .cover{
-    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+    background: url('/Images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
     color:var(--color-jaune)
 }
-
-
-
-#book
 
 #book2{
     
 }
 
 #book2 .cover{
-    background: url('../images/Livres/Cartographie-des-jours.jpg') center/cover no-repeat;
+    background: url('/Images/Livres/Cartographie-des-jours.jpg') center/cover no-repeat;
+    color:var(--color-)
 }
 
 #book3{
@@ -256,7 +252,7 @@ section{
 }
 
 #book3 .cover{
-    background: url('../images/Livres/Habiter-le-vivant.jpg') center/cover no-repeat;
+    background: url('/Images/Livres/Habiter-le-vivant.jpg') center/cover no-repeat;
 }
 
 #book4{
@@ -264,7 +260,7 @@ section{
 }
 
 #book4 .cover{
-    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+    background: url('../images/Livres/Le-bleu-entre-nous.jpg') center/cover no-repeat;
 }
 
 #book5{
@@ -272,6 +268,6 @@ section{
 }
 
 #book5 .cover{
-    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+    background: url('../images/Livres/Petite-meterologie.jpg') center/cover no-repeat;
 }
 
