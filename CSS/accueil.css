@@ -157,7 +157,6 @@ span{
 }
 
 section{
-    margin: 0.5rem; /* Marge extérieure */
     padding:1rem; /* Marge intérieure */
     background-color: var(--color-creme);
     border-radius: 10px; /* Applique un effet d'arrondit */
@@ -197,40 +196,66 @@ section{
     width:3rem;
 }
 
-.Accueil__new-book .book-list ul{
+.Accueil__new-book .book-list {
+    padding-top: 1rem;
     display: flex;
     flex-direction: row;
+    gap:0.5rem;
+    justify-content:center;
+}
+
+.book-list ul {
+    display:flex;
+    flex-direction: row;
     gap:1rem;
+}
+
+.book-list img{
+    margin-top:5rem;
 }
 
 .book{
     border: 1px transparent black;
 }
 
+.cover{
+    border-radius: 5px;
+    height:12rem;
+    width: 9rem;
+    position:relative;
+}
+
+.book-description__title{
+    font-size:1rem;
+    margin:auto;
+    padding-top:0.5rem;
+    max-width: 9rem;
+}
+
+.book-description__author{
+    color:var(--color-text-muted);
+    margin:auto;
+}
+
 .book .cover__book-type{
     position:absolute;
+    font-size: 0.8rem;
+    left:0.2rem;
     top:0px;
 }
 
 .book h5{
     position:absolute;
-    top:0px;
+    font-size: 1.3rem;
+    left:0.2rem;
+    bottom:1rem;
 }
 
-.book .cover__book-type{
+.book .cover__author{
     position:absolute;
-    top:0px;
-}
-.cover{
-    border-radius: 5px;
-    height:10rem;
-    width: 8rem;
-    position:relative;
-}
-
-
-#book1{
-
+    font-size: 0.8rem;
+    bottom:0px;
+    left:0.2rem;
 }
 
 #book1 .cover{
@@ -238,36 +263,32 @@ section{
     color:var(--color-jaune)
 }
 
-#book2{
-    
-}
 
 #book2 .cover{
     background: url('/Images/Livres/Cartographie-des-jours.jpg') center/cover no-repeat;
-    color:var(--color-)
-}
-
-#book3{
-    
+    color:var(--color-vertf)
 }
 
 #book3 .cover{
     background: url('/Images/Livres/Habiter-le-vivant.jpg') center/cover no-repeat;
-}
-
-#book4{
-    display:none; /* Afin de ne pas avoir à écraser chaque livre ou a utiliser du js*/
+    color:black;
 }
 
 #book4 .cover{
     background: url('../images/Livres/Le-bleu-entre-nous.jpg') center/cover no-repeat;
 }
 
+#book5 .cover{
+    background: url('../images/Livres/Petite-meterologie.jpg') center/cover no-repeat;
+}
+
+#book4{
+    display:none; /* Afin de ne pas avoir à écraser chaque livre ou a utiliser du js*/
+}
+
 #book5{
     display:none;
 }
 
-#book5 .cover{
-    background: url('../images/Livres/Petite-meterologie.jpg') center/cover no-repeat;
-}
+
 
