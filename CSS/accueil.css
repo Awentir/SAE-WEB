@@ -155,7 +155,7 @@ h1{
 span{
     color:var(--color-orange)
 }
-/* Haut de la page (hors nav) */
+
 section{
     margin: 0.5rem; /* Marge extérieure */
     padding:1rem; /* Marge intérieure */
@@ -163,5 +163,115 @@ section{
     border-radius: 10px; /* Applique un effet d'arrondit */
 }
 
+.over-title{
+    color: var(--color-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-top: 25px;
+    text-align: center;
+}
 
-/* Mise en forme des autres parties */
+.under-title{
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+}
+
+.Accueil__new-book{
+    background-color: var(--color-white);
+    display:flex;
+    flex-direction: column;
+}
+
+.Accueil__new-book button{  
+    background-color: transparent;
+    border-radius: 999px;
+    border: 1px solid var(--color-texte);
+    padding:0.4rem;
+}
+
+.Accueil__new-book img{
+    height: 3rem;
+    width:3rem;
+}
+
+.Accueil__new-book .book-list ul{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.book{
+    border: 1px transparent black;
+    
+}
+
+.book .cover__book-type{
+    position:absolute;
+    top:0px;
+}
+
+.book h5{
+    position:absolute;
+    top:0px;
+}
+
+.book .cover__book-type{
+    position:absolute;
+    top:0px;
+}
+.cover{
+    border-radius: 5px;
+    height:10rem;
+    width: 8rem;
+    position:relative;
+}
+
+
+#book1{
+
+}
+
+#book1 .cover{
+    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+    color:var(--color-jaune)
+}
+
+
+
+#book
+
+#book2{
+    
+}
+
+#book2 .cover{
+    background: url('../images/Livres/Cartographie-des-jours.jpg') center/cover no-repeat;
+}
+
+#book3{
+    
+}
+
+#book3 .cover{
+    background: url('../images/Livres/Habiter-le-vivant.jpg') center/cover no-repeat;
+}
+
+#book4{
+    display:none; /* Afin de ne pas avoir à écraser chaque livre ou a utiliser du js*/
+}
+
+#book4 .cover{
+    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+}
+
+#book5{
+    display:none;
+}
+
+#book5 .cover{
+    background: url('../images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
+}
+
