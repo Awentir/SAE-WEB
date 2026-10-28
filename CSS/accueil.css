@@ -68,7 +68,6 @@
 
 }
 
-
 .hero__gauche__buttons button a {
     text-decoration: none;
     color: inherit;
@@ -111,7 +110,7 @@
 
 .hero__droite {
     position: relative; /* position ? relative ?*/ /* Permet de positionner l'élément par rapport à sa position normale dans le document. Cela permet de déplacer l'élément par rapport à sa position initiale sans affecter les autres éléments autour de lui. */
-    display: flex; /* Quelle est la différence entre display et flex ? */ /* display : permet de définir le type d'affichage d'un élément (block, inline, flex, grid, etc.) 
+    display: flex; /* Quelle est la différence entre display et position ? */ /* display : permet de définir le type d'affichage d'un élément (block, inline, flex, grid, etc.) 
                                         flex : est une valeur de display qui permet de créer un conteneur flexible pour les éléments enfants. */
     flex-direction: column;
     justify-content: space-between; /* space-between ? */ /* Permet de distribuer l'espace disponible entre les éléments enfants de manière égale, en plaçant le premier élément au début du conteneur et le dernier élément à la fin du conteneur, avec un espace égal entre chaque élément. */
@@ -205,18 +204,24 @@ section{
     width:3rem;
 }
 
-.Accueil__new-book .book-list {
+.book-list {
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
-    gap:0.5rem;
-    justify-content:center;
+    gap:0rem;
+    justify-content: space-between;
+    min-width:20%;
+    overflow:scroll;
 }
 
 .book-list ul {
+    max-width:80%;
     display:flex;
     flex-direction: row;
     gap:1rem;
+    justify-content: center;
+    overflow: scroll;
+    
 }
 
 .book-list img{
@@ -224,17 +229,30 @@ section{
 }
 
 .book{
+    position: relative;
     border: 1px transparent black;
+    height: 18rem;
+    min-width:9rem;
 }
 
 .cover{
+    box-sizing: content-box;
     border-radius: 5px;
     height:12rem;
-    width: 9rem;
     position:relative;
 }
 
+.book-description{
+    box-sizing: content-box;
+    padding:0.5rem;
+}
+
 .book-description__title{
+    position:absolute;
+    bottom:3rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    text-align:flex-start;
     font-size:1rem;
     margin:auto;
     padding-top:0.5rem;
@@ -242,11 +260,38 @@ section{
 }
 
 .book-description__author{
+    position:absolute;
+    bottom:2rem;
+    font-size: 0.8rem;
     color:var(--color-text-muted);
     margin:auto;
+    padding:auto;
 }
 
-.book .cover__book-type{
+.book-description__price{
+    position:absolute;
+    bottom:0rem;
+    font-weight: 700; /* Permet de mettre le texte en gras */
+    margin:auto;
+    padding-bottom:0.5rem;
+}
+
+.book-description button{
+    position:absolute;
+    right:0.2rem;
+    bottom:0.2rem;
+    background-color: var(--color-orange);
+    border: 1px transparent var(--color-orange);
+    padding:0.4rem;
+    margin:auto;
+    margin-top:0.5rem;
+}
+
+.book-description__button i{
+    color:var(--color-white);
+}
+
+.cover__book-type{
     position:absolute;
     font-size: 0.8rem;
     left:0.2rem;
@@ -254,6 +299,8 @@ section{
 }
 
 .book h5{
+    box-sizing: content-box;
+    width: 80%;
     position:absolute;
     font-size: 1.3rem;
     left:0.2rem;
@@ -271,7 +318,6 @@ section{
     background: url('/Images/Livres/La-nuit-des-lucioles.jpg') center/cover no-repeat;
     color:var(--color-jaune)
 }
-
 
 #book2 .cover{
     background: url('/Images/Livres/Cartographie-des-jours.jpg') center/cover no-repeat;
@@ -291,13 +337,6 @@ section{
     background: url('../images/Livres/Petite-meterologie.jpg') center/cover no-repeat;
 }
 
-#book4{
-    display:none; /* Afin de ne pas avoir à écraser chaque livre ou a utiliser du js*/
-}
-
-#book5{
-    display:none;
-}
 
 
 
