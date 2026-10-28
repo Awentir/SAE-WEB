@@ -4,8 +4,11 @@
     display: flex;
     flex-direction: column; 
     gap: 32px;
-    width: min(100%, 1440px); /* min ? */
-    margin: 0 auto; /* auto ? */
+    width: min(100%, 1440px); /* min ? */ /* Permet de définir la largeur maximale de l'élément à 1440px, mais si la largeur de l'écran est inférieure à 1440px, l'élément prendra la largeur de l'écran (100%). */
+    margin: 0 auto; /* auto ? */ /* Permet de centrer l'élément horizontalement dans son conteneur parent. 
+                                    Margin marche dans cette ordre : top right bottom left 
+                                    si il n'y en a que 2 cela fais 1er valeur = Haut/Bas (top/bottom) et 2eme valeur = Gauche/Droite (right/left) 
+                                    ici valeur 1 = 0 et valeur 2 = auto (auto = automatique)*/
     padding: 32px 16px;
 }
 
@@ -57,9 +60,14 @@
     background: transparent;
     font-weight: 700;
     font-size: 0.85rem;
-    cursor: pointer; /* ? */
-    transition: all 0.2s ease;  /* ? */
+    cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
+    transition: all 0.2s ease;  /* ? */ /* Permet de faire une transition sur tous les elements 
+                                        de 0.2s et de manière fluide (ease) quand il y a une interaction
+                                         avec (ici c'est hover) / 
+                                         en gros c plus beau ça evite que l'animation ce joue instantanément */
+
 }
+
 
 .hero__gauche__buttons button a {
     text-decoration: none;
@@ -67,7 +75,7 @@
 }
 
 .hero__gauche__button--nouveaute {
-    background: var(--color-orange) !important; /* !important ? */
+    background: var(--color-orange) !important; /* !important ? */ /* Permet de forcer la priorité de cette règle css sur les autres règles css qui pourraient s'appliquer à cet élément cela évite que cette regle ne marche pas car il est en contradiction avec une autre regle*/
     border-color: var(--color-orange) !important;
     color: var(--color-white);
 }
@@ -82,7 +90,7 @@
     flex-wrap: wrap;
     gap: 24px;
     margin-top: 16px;
-    list-style: none; /* ? */
+    list-style: none; /* ? */ /* Permet de retirer les puces des listes */
 }
 
 .hero__gauche__infos li {
@@ -102,10 +110,11 @@
 }
 
 .hero__droite {
-    position: relative; /* position ? relative ?*/
-    display: flex; /* Quelle est la différence entre display et flex ? */
+    position: relative; /* position ? relative ?*/ /* Permet de positionner l'élément par rapport à sa position normale dans le document. Cela permet de déplacer l'élément par rapport à sa position initiale sans affecter les autres éléments autour de lui. */
+    display: flex; /* Quelle est la différence entre display et flex ? */ /* display : permet de définir le type d'affichage d'un élément (block, inline, flex, grid, etc.) 
+                                        flex : est une valeur de display qui permet de créer un conteneur flexible pour les éléments enfants. */
     flex-direction: column;
-    justify-content: space-between; /* space-between ? */
+    justify-content: space-between; /* space-between ? */ /* Permet de distribuer l'espace disponible entre les éléments enfants de manière égale, en plaçant le premier élément au début du conteneur et le dernier élément à la fin du conteneur, avec un espace égal entre chaque élément. */
     min-height: 350px;
     padding: 20px;
     border-radius: 20px;
