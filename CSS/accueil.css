@@ -160,6 +160,13 @@ h1{
     font-size:175%;
 }
 
+h2{
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin:auto;
+    text-align: left;
+}
+
 span{
     color:var(--color-orange)
 }
@@ -169,34 +176,40 @@ section{
     background-color: var(--color-creme);
     border-radius: 10px; /* Applique un effet d'arrondit */
 }
-
+/* ################ Partie nouveautés ################ */
 .over-title{
     color: var(--color-orange);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 8px;
-    padding-top: 25px;
-    text-align: center;
+    text-align: left;
 }
 
 .under-title{
     font-size: 0.95rem;
     color: var(--color-text-muted);
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .Accueil__new-book{
-    background-color: var(--color-white);
     display:flex;
     flex-direction: column;
+    background-color: var(--color-white);
+    width: min(100%, 1440px);
+    margin: 40px auto;
 }
 
-.Accueil__new-book button{  
-    background-color: transparent;
+.goto{ 
+    padding: 12px 24px;
     border-radius: 999px;
     border: 1px solid var(--color-texte);
-    padding:0.4rem;
+    align-self: end;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
+    transition: all 0.2s ease;
 }
 
 .Accueil__new-book img{
@@ -211,7 +224,6 @@ section{
     gap:0rem;
     justify-content: space-between;
     min-width:20%;
-    overflow:scroll;
 }
 
 .book-list ul {
@@ -219,9 +231,10 @@ section{
     display:flex;
     flex-direction: row;
     gap:1rem;
-    justify-content: center;
-    overflow: scroll;
-    
+    /* 'safe center' garantit que si le contenu déborde, il s'aligne à gauche pour rester accessible */
+    justify-content: safe center; 
+    overflow-y: hidden; /* Empêche le défilement vertical */
+    overflow-x: scroll; /* Permet le défilement horizontal si nécessaire */
 }
 
 .book-list img{
@@ -230,20 +243,19 @@ section{
 
 .book{
     position: relative;
-    border: 1px transparent black;
+    border: 1px transparent black; /* Nécessaire pour avoir une image en background*/
     height: 18rem;
     min-width:9rem;
+    margin-bottom: 1rem; /*Empêche la barre de scroll de s'afficher sur les boutons*/
 }
 
 .cover{
-    box-sizing: content-box;
     border-radius: 5px;
     height:12rem;
     position:relative;
 }
 
 .book-description{
-    box-sizing: content-box;
     padding:0.5rem;
 }
 
@@ -292,8 +304,10 @@ section{
 }
 
 .cover__book-type{
+    
     position:absolute;
     font-size: 0.8rem;
+    font-weight: 700;
     left:0.2rem;
     top:0px;
 }
@@ -305,6 +319,7 @@ section{
     font-size: 1.3rem;
     left:0.2rem;
     bottom:1rem;
+    font-weight: 700;
 }
 
 .book .cover__author{
@@ -331,12 +346,175 @@ section{
 
 #book4 .cover{
     background: url('../images/Livres/Le-bleu-entre-nous.jpg') center/cover no-repeat;
+    color:var(--color-jaune)
 }
 
 #book5 .cover{
     background: url('../images/Livres/Petite-meterologie.jpg') center/cover no-repeat;
+    color:var(--color-orange)
 }
 
+/* ################ Partie Événements ################ */
 
+.Accueil__events{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min(100%, 1440px);
+    margin: 40px auto;
+}
 
+.Accueil__events__elements{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
 
+.Accueil__events__left{
+    position: relative;
+    height:20rem;
+    width: min(100%, 1440px);
+    border-radius: 20px;
+    background: url('/Images/Accueil/Club-de-Littérature.jpg') center/cover no-repeat;
+}
+
+.Accueil__events__left__en-tête{
+    position:absolute;
+    
+    top:0.5rem;
+    left:1rem;
+
+    padding:0.2rem;
+    width: 20%;
+
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-white);
+
+    border: 1px solid var(--color-orange);
+    border-radius: 999px;
+    
+    background-color: var(--color-orange);
+}
+
+.Accueil__events__left__description{
+    position:absolute;
+    bottom:0%;
+    right:1rem;
+
+    padding:0.5rem;
+    width: auto;
+
+    font-size: 1.25rem;
+    font-family: var(--font-serif);
+    text-align: center;
+    color: var(--color-white);
+
+    border: 1px transparent black;
+    border-radius: 999px;
+    
+    background-color: rgb(0,0,0,0.7);
+
+}
+
+.Accueil__events__right ul{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.Accueil__events__event{
+    display:flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    min-width: 30%;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.Accueil__events__event__date{
+    
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem;
+
+    border-radius: 20px;
+    background-color: var(--color-white);
+}
+
+.Accueil__events__event__date h6{
+    margin-top:1rem;
+    margin-bottom:0rem;
+
+    font-size: 2.5rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    text-align: center;
+}
+
+.Accueil__events__event__date p{
+    margin:auto;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color:var(--color-orange);
+    text-align: center;
+}
+
+.Accueil__events__event__text{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Accueil__events__event__text p{
+    margin:0.2rem;
+
+    font-size: 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color:var(--color-text-muted);
+    text-align: left;
+}
+
+.Accueil__events__event__text h6{
+    margin:0;
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color:var(--color-texte);
+}
+
+.Accueil__events__event__button{
+    height: 20%;
+    width: 20%;
+
+    border-radius: 999px;
+    border: 1px transparent var(--color-orange);
+
+    padding: 0.5rem;
+    margin-top:2rem;
+    margin-right: 1rem;
+
+    color: var(--color-white);
+
+    background-color: var(--color-orange);
+}
+
+#event1 {
+    background-color: var(--color-rose);
+}
+
+#event2 {
+    background-color: var(--color-vert);
+}
+
+#event3 {
+    background-color: var(--color-jaune);
+}
