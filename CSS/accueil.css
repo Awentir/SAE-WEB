@@ -1,4 +1,62 @@
 
+main h1{
+    font-family: var(--font-serif);
+    font-size:175%;
+}
+
+main h2{
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin:0;
+    text-align: left;
+}
+
+main span{
+    color:var(--color-orange)
+}
+
+main section{
+    display:flex;
+    flex-direction: column;
+    width: min(100%, 1440px);
+    margin: 40px auto;
+    padding:1rem; /* Marge intérieure */
+    background-color: var(--color-creme);
+    border-radius: 10px; /* Applique un effet d'arrondit */
+}
+
+main img{
+    width: 100%;
+    height: auto;
+}
+
+.goto{ 
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--color-texte);
+    align-self: end;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
+    transition: all 0.2s ease;
+}
+
+.over-title{
+    color: var(--color-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.under-title{
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
 /* --- Section Hero --- */
 .hero {
     display: flex;
@@ -62,10 +120,9 @@
     font-size: 0.85rem;
     cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
     transition: all 0.2s ease;  /* ? */ /* Permet de faire une transition sur tous les elements 
-                                        de 0.2s et de manière fluide (ease) quand il y a une interaction
+                                        de 0.2s et de manière fluide (eas/e) quand il y a une interaction
                                          avec (ici c'est hover) / 
-                                         en gros c plus beau ça evite que l'animation ce joue instantanément */
-
+                                         en gros c plus beau ça evite que l'animation ce joue instantanément *
 }
 
 .hero__gauche__buttons button a {
@@ -155,61 +212,15 @@
 }
 /* Fin hero*/
 
-h1{
-    font-family: var(--font-serif);
-    font-size:175%;
-}
-
-h2{
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    margin:auto;
-    text-align: left;
-}
-
-span{
-    color:var(--color-orange)
-}
-
-section{
-    padding:1rem; /* Marge intérieure */
-    background-color: var(--color-creme);
-    border-radius: 10px; /* Applique un effet d'arrondit */
-}
 /* ################ Partie nouveautés ################ */
-.over-title{
-    color: var(--color-orange);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: left;
-}
 
-.under-title{
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
-    margin-bottom: 20px;
-    text-align: left;
-}
+
+
 
 .Accueil__new-book{
-    display:flex;
-    flex-direction: column;
+   
     background-color: var(--color-white);
-    width: min(100%, 1440px);
-    margin: 40px auto;
-}
-
-.goto{ 
-    padding: 12px 24px;
-    border-radius: 999px;
-    border: 1px solid var(--color-texte);
-    align-self: end;
-    background: transparent;
-    font-weight: 700;
-    font-size: 0.85rem;
-    cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
-    transition: all 0.2s ease;
+    
 }
 
 .Accueil__new-book img{
@@ -516,5 +527,181 @@ section{
 }
 
 #event3 {
+    background-color: var(--color-jaune);
+}
+
+/* ################ Partie Équipe ################ */
+
+.Accueil__team{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min(100%, 1440px);
+    margin: 40px auto;
+    background-color: var(--color-white); 
+}
+
+.Accueil__team__members ul{
+    display:flex;
+    flex-direction: row;
+    padding:1rem;
+    gap: 1rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    overflow-y: hidden; /* Empêche le défilement vertical */
+    overflow-x: scroll;
+}
+
+.Accueil__team__member{
+    display:flex;
+    flex-direction: row;
+
+    height:15rem;
+    width:25rem;
+
+    border:1px transparent black;
+    border-radius: 20px 20px 20px 20px ;
+    
+    
+}
+
+.Accueil__team__member img{
+    min-width: 40%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+.Accueil__team__member__text{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+
+.Accueil__team__member__text h6{
+    margin:0.5rem;
+
+    font-size: 1.25rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+
+    color:var(--color-texte);
+}
+
+.Accueil__team__member__type{
+    margin:0.5rem;
+
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+
+    color:var(--color-text-muted);
+}
+
+.Accueil__team__member__type{
+    margin:0.5rem;
+
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+
+    color:var(--color-text-muted);
+}
+
+.Accueil__team__member__text__citation{
+    margin:0.75rem;
+
+    font-size: 1.2rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+
+    color:black;
+}
+
+#member1{
+    background-color: var(--color-rose);
+}
+
+#member2{
+    background-color: var(--color-vert);
+}
+
+#member3{
+    background-color: var(--color-jaune);
+}
+
+/* ################ Partie Avis ################ */
+
+.Accueil__reviews{
+    background-color: var(--color-creme);
+}
+
+.Accueil__reviews__review{
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    
+}
+
+.Accueil__reviews__boards ul{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    margin: 1rem;
+
+    border-radius: 20px;
+    overflow-x:scroll;
+}
+
+.review-text{
+    font-size: 0.9rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color:var(--color-text);
+}
+
+.review-note{
+    color: var(--color-orange);
+}
+
+.Accueil__reviews__review-account{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    height: 100%;
+    min-height: 3rem;
+    width: 20rem;
+    background-color: var(--color-white);
+}
+
+.account-logo{
+    text-align: center;
+    align-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 999px;
+
+    color: black;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+#user1 .account-logo{
+    background-color: var(--color-rose);
+}
+
+#user2 .account-logo{
+    background-color: var(--color-vert);
+}
+
+#user3 .account-logo{
     background-color: var(--color-jaune);
 }
