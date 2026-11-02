@@ -26,19 +26,27 @@ main img{
     height: auto;
 }
 
-.goto{ 
-    
-    position:absolute;
-    top:6rem;
+.section-heading{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.section-heading__text{
+    min-width:0;
+}
+
+.goto{
+    flex:0 0 auto;
     padding: 12px 24px;
     border-radius: 999px;
     border: 1px solid var(--color-texte);
     background: var(--color-white);
-    align-self: end;
     font-weight: 700;
     font-size: 0.85rem;
-    cursor: pointer; /* ? */ /* Permet que des que le cursor passe sur cet element il change de forme (pointer forme quand on clique) */
-    transition: all 0.2s ease;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .goto:hover{
@@ -185,7 +193,7 @@ main img{
     font-weight: 700;
 }
 
-.hero__droite > div {
+.hero__droite div {
     background: var(--color-white);
     color: var(--color-texte);
     padding: 16px;
@@ -692,6 +700,34 @@ main img{
 /* --- Grand Desktop (>= 1100px) --- */
 @media (min-width: 1100px){
 
+    .section-heading{
+        flex-direction:row;
+        align-items:flex-end;
+        justify-content:space-between;
+    }
+
+    /* Partie Hero */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+        padding: 40px 75px;
+    }
+
+    .hero__gauche__titre {
+        font-size: 3.5rem;
+    }
+
+    .hero__gauche__sous-titre {
+        font-size: 1.15rem;
+        max-width: 80%;
+    }
+
+    .hero__droite {
+        min-height: 500px;
+        padding: 40px;
+    }
 
     /* Partie nouveautées */
     .book-list ul {
@@ -730,6 +766,12 @@ main img{
     .Accueil__events__event{
         height: auto;
         width: 100%;
+    }
+
+    /* Partie équipe */
+    .Accueil__team__members ul{
+        gap: 2rem;
+        justify-content: center;
     }
 }
 

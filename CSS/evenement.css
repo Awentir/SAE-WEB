@@ -15,6 +15,11 @@ main ol {
     list-style: none;
 }
 
+main section {
+    border-radius: 10px;
+}
+
+
 /* --- Titres de section --- */
 .evenement__titre {
     margin-bottom: 24px;
@@ -140,7 +145,7 @@ main ol {
     font-weight: 700;
 }
 
-.hero__droite > div {
+.hero__droite div {
     max-width: 250px;
     padding: 16px;
     border-radius: 12px;

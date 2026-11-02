@@ -11,6 +11,10 @@ main :is(h1, h2, h3, p, ul, ol) {
     padding: 0;
 }
 
+main section {
+    border-radius: 10px;
+}
+
 /* --- Section Hero --- */
 .hero {
     display: flex;
@@ -136,7 +140,7 @@ main :is(h1, h2, h3, p, ul, ol) {
     font-weight: 700;
 }
 
-.hero__droite > div {
+.hero__droite div {
     background: var(--color-white);
     color: var(--color-texte);
     padding: 16px;
